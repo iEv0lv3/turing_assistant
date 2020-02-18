@@ -6,9 +6,35 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <div class="mainContentWrapper">
+
+    <ul>
+      <li><%= link_to 'Turing Assistant', "/" %></li>
+      <li><%= link_to 'Students', "/students" %></li>
+      <li class="rightFloatNavLink"><%= link_to 'Login', "/" %></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="mainContentContainer">
+      <%= yield %>
+    </div>
+
+    <div class="footer">
+      <p>Slack: @jordan | @Alexis Dumotier</p>
+      <p>Made with ❤️ at Turing</p>
+    </div>
+
+    </div>
   </body>
 </html>
